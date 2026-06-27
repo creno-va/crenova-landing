@@ -130,6 +130,7 @@
     --bg-soft:#fbfaf7;
     --surface:#ffffff;
     --ink:#15171c;
+    --ink-inverse:#ffffff;
     --ink-2:#545a63;
     --ink-3:#8b9099;
     --ink-4:#aeb2b8;
@@ -169,9 +170,10 @@
   .nav-links{display:flex;align-items:center;gap:32px}
   .nav-links a{font-family:var(--disp);font-size:.82rem;font-weight:400;letter-spacing:.04em;color:var(--ink-2);transition:color .25s}
   .nav-links a:hover{color:var(--ink)}
-  .nav-cta{font-family:var(--disp);font-size:.78rem;letter-spacing:.05em;color:#fff important;background:var(--ink);padding:9px 18px;clip-path:polygon(7px 0,100% 0,100% calc(100% - 7px),calc(100% - 7px) 100%,0 100%,0 7px);transition:opacity .25s}
-  .nav-cta:hover{opacity:.85}
-  .menu-btn{display:none;background:none;border:0;color:var(--ink) important;cursor:pointer;padding:6px}
+  .nav-links .nav-cta{font-family:var(--disp);font-size:.78rem;letter-spacing:.05em;color:var(--ink-inverse);background:var(--ink);padding:9px 18px;clip-path:polygon(7px 0,100% 0,100% calc(100% - 7px),calc(100% - 7px) 100%,0 100%,0 7px);transition:opacity .25s,color .25s}
+  .nav-links .nav-cta:hover,
+  .nav-links .nav-cta:focus-visible{color:var(--ink-inverse);opacity:.85}
+  .menu-btn{display:none;background:none;border:0;color:var(--ink);cursor:pointer;padding:6px}
   .menu-btn span{display:block;width:23px;height:1.6px;background:var(--ink);margin:5px 0;transition:.3s}
 
   /* HERO */
